@@ -87,12 +87,11 @@ Animals.run = function() {
 
 }
 
-Animals.debug = function() {
-	firebug.d.console.clear();
-	firebug.d.console.cmd.dir(eval("(" + Animals.top.stringify() + ")"));
-}
-
 Animals.init = function() {
 	document.getElementById('cmdRun').focus();
 	Animals.debug();
+}
+
+Animals.debug = function() {
+	console.debug("animals", Animals.top);
 }
